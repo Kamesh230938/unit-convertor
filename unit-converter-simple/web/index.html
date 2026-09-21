@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Professional unit conversion application"
+    >
+
+    <title>Unit Converter</title>
+
+    <link
+        rel="stylesheet"
+        href="/styles.css"
+    >
+</head>
+
+<body>
+
+<div class="app">
+
+    <header class="topbar">
+
+        <a class="brand" href="/">
+            <span class="brand-icon">↔</span>
+
+            <span>
+                <strong>Unit Converter</strong>
+                <small>Convert with confidence</small>
+            </span>
+        </a>
+
+        <button
+            id="themeToggle"
+            class="theme-button"
+            type="button"
+            title="Toggle dark mode"
+        >
+            ☾
+        </button>
+
+    </header>
+
+    <main>
+
+        <section class="hero">
+
+            <div>
+                <span class="eyebrow">
+                    SIMPLE · FAST · ACCURATE
+                </span>
+
+                <h1>
+                    Convert anything.<br>
+                    <span>In seconds.</span>
+                </h1>
+
+                <p>
+                    A clean and professional unit converter
+                    powered by a simple Java backend.
+                </p>
+            </div>
+
+            <div class="category-count">
+                <strong>7</strong>
+                <span>Categories</span>
+            </div>
+
+        </section>
+
+        <nav
+            id="categories"
+            class="categories"
+            aria-label="Categories"
+        ></nav>
+
+        <section class="converter">
+
+            <div class="converter-top">
+
+                <div>
+                    <span class="label">
+                        CONVERSION
+                    </span>
+
+                    <h2 id="categoryName">
+                        Length
+                    </h2>
+                </div>
+
+                <span
+                    id="status"
+                    class="status"
+                >
+                    Ready
+                </span>
+
+            </div>
+
+            <div class="conversion-grid">
+
+                <div class="unit-box">
+
+                    <label for="inputValue">
+                        From
+                    </label>
+
+                    <input
+                        id="inputValue"
+                        type="number"
+                        step="any"
+                        value="1"
+                        placeholder="Enter value"
+                    >
+
+                    <select id="fromUnit"></select>
+
+                </div>
+
+                <button
+                    id="swap"
+                    class="swap"
+                    type="button"
+                    title="Swap units"
+                >
+                    ⇄
+                </button>
+
+                <div class="unit-box">
+
+                    <label for="outputValue">
+                        To
+                    </label>
+
+                    <div class="output-wrap">
+
+                        <input
+                            id="outputValue"
+                            type="text"
+                            readonly
+                        >
+
+                        <button
+                            id="copy"
+                            class="copy"
+                            type="button"
+                            title="Copy result"
+                        >
+                            ⧉
+                        </button>
+
+                    </div>
+
+                    <select id="toUnit"></select>
+
+                </div>
+
+            </div>
+
+            <div class="formula">
+                <span id="formula">
+                    1 Meter = 1 Meter
+                </span>
+
+                <span class="connected">
+                    ● Java connected
+                </span>
+            </div>
+
+        </section>
+
+        <section class="history">
+
+            <div class="history-heading">
+
+                <div>
+                    <span class="label">
+                        ACTIVITY
+                    </span>
+
+                    <h2>Recent conversions</h2>
+                </div>
+
+                <button
+                    id="clear"
+                    type="button"
+                    class="clear"
+                >
+                    Clear
+                </button>
+
+            </div>
+
+            <div id="historyList"></div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <span>HTML · CSS · JavaScript · Core Java</span>
+        <span>No Maven · No Spring Boot</span>
+    </footer>
+
+</div>
+
+<div
+    id="toast"
+    class="toast"
+></div>
+
+<script src="/app.js"></script>
+
+</body>
+</html>
